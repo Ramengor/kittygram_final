@@ -18,6 +18,9 @@ services:
     volumes:
       - static_volume:/backend_static
       - media_volume:/app/media
+    expose:
+      - "9000"
+
 
   frontend:
     image: ramengor/kittygram_frontend
