@@ -18,8 +18,8 @@ services:
     depends_on:
       - db
     volumes:
-      - static:/static
-      - media:/app/media
+      - static:/static/
+      - media:/app/media/
 
 
   frontend:
@@ -36,7 +36,7 @@ services:
       - 9000:80
     volumes:
       - static:/static
-      - media:/app/media
+      - media:/app/media/
     depends_on:
       - backend
       - frontend
