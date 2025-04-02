@@ -16,10 +16,8 @@ services:
     image: ramengor/kittygram_backend
     env_file: .env.example
     volumes:
-      - static:/static/
-      - media:/app/media/
-    expose:
-      - "9000"
+      - static:/static
+      - media:/app/media
 
 
   frontend:
@@ -34,7 +32,7 @@ services:
     env_file: .env.example
     volumes:
       - static:/static
-      - media:/app/media/
+      - media:/app/media
     ports:
       - 9000:80
     depends_on:
